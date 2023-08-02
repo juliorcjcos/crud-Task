@@ -37,7 +37,21 @@ query Query($email: String!, $password: String!) {
 }
 `
 export const createUser = gql`
-  mutation CreateUser($name: String!, $nit: String, $phone: String, $email: String!, $password: String!, $genderId: ID) {
-  createUser(name: $name, nit: $nit, phone: $phone, email: $email, password: $password, genderId: $genderId)
-}
+  mutation CreateUser(
+    $name: String!
+    $email: String!
+    $password: String!
+    $phone: String
+    $nit: String
+    $genderId: ID
+  ) {
+    createUser(
+      name: $name
+      email: $email
+      password: $password
+      phone: $phone
+      nit: $nit
+      genderId: $genderId
+    )
+  }
 `;

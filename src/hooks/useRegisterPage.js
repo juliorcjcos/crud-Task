@@ -10,8 +10,8 @@ import { useMutation } from "@apollo/client";
         email: "",
         password: "",
         phone: "",
-        rolId: "64551b0e2fd8288b0dd40f7b",
-        genderId: "64551c122fd8288b0dd40f81",
+        rolId: "64cabb5e02b20604a794a79e",
+        genderId: "64cabaca02b20604a794a798",
         nit: "N/A",
     };
 
