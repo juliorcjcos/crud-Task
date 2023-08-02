@@ -69,6 +69,8 @@ export const useCard = () => {
     title: "",
     body: "",
     date: "",
+    background: "blue",
+    foreground: "blue",
   };
 
   const validate = (values)=>{
@@ -91,7 +93,9 @@ export const useCard = () => {
         taskListId: router.query.id,
         title: values.title,
         body: values.body,
-        expireAt: values.date
+        expireAt: values.date,
+        background: values.background,
+        foreground: values.foreground,
       },
     });
    // console.log("sss",values);

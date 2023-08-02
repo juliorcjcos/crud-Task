@@ -1,19 +1,25 @@
 import { gql } from "@apollo/client";
 
 export const createTask = gql`
-  mutation CreateTask(
-  $title: String!, 
-  $body: String!,
-  $ownerId: ID!,
-  $taskListId: ID!
-  $expireAt: Date) {
-  createTask(title: $title, 
-  body: $body,
-  ownerId: $ownerId,
-  taskListId: $taskListId
-  expireAt: $expireAt)
-  
-}
+   mutation CreateTask(
+    $title: String!
+    $body: String!
+    $ownerId: ID!
+    $taskListId: ID!
+    $foreground: String!
+    $background: String!
+    $completed: Boolean
+  ) {
+    createTask(
+      title: $title
+      body: $body
+      ownerId: $ownerId
+      taskListId: $taskListId
+      foreground: $foreground
+      background: $background
+      completed: $completed
+    )
+  }
 `;
 
 export const tasksByOwner = gql`

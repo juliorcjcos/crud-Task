@@ -1,13 +1,13 @@
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import { NavbarLayout } from "@/layouts/NavarLayout";
+import { NavbarLayout } from "@/layouts/NavbarLayout";
 import { SidebarLayout } from "@/layouts/SidebarLayout";
 import { useRouter } from "next/router";
 import SessionContextProvider from "@/contexts/SessionContext";
 
 const client = new ApolloClient({
-  uri: "http://10.2.20.119:4000/graphql",
+  uri: "https://render-back-bw0c.onrender.com/graphql",
   
   // InMemoryCache para guardar los datos en cache. cuando se hagan cambios apollo no tenga que pedir los datos acada momento.
   cache: new InMemoryCache(),

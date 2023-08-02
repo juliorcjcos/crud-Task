@@ -29,7 +29,7 @@ export const UserFormLogin = ({ validate, initialValues, onSubmit }) => {
               to enjoy all of our cool <Link color={"blue.400"}>
                 features
               </Link>{" "}
-              ✌️
+              
             </Text>
           </Stack>
           <Center>

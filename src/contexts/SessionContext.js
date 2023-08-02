@@ -24,7 +24,7 @@ const SessionContextProvider = ({children})=>{
     }
   }, []);
 
-  // logout 
+  // logout session
   // removeItem se elimina un elemento de localStorage ("session1") y se agrega ruta con router.push / cierre session
   const logout = () => {
       localStorage.removeItem("session1");

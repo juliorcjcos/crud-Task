@@ -1,6 +1,6 @@
+import React from "react";
 import { Box, Button, Flex, Grid, Input } from "@chakra-ui/react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import React from "react";
 
 export const TasksListFormCreate = ({validate, initialValues, onSubmit}) => {
   return (
