@@ -17,9 +17,9 @@ import { useRouter } from "next/router";
 import { AlertDelete } from "../AlertDelete";
 
 export const TaskListCard = ({ handleDeleteTaskList, taskList, setTaskListid}) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
   // estado para seleccionar la List y pasar el elemento en la funcion onClick del boton eliminar 
   const [selectedList, setSelectedList] = useState({})
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
   // console.log(taskList?.taskListsByOwner);
   return (

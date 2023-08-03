@@ -1,13 +1,13 @@
+import { useMutation, useQuery } from "@apollo/client";
 import { useState, useContext} from "react";
 import { createTaskList, deleteTaskList, taskListsByOwner, updateTaskList } from "@/graphql/tasksListCardGraphql";
 import { useRouter } from "next/router";
 import { SessionContext } from "@/contexts/SessionContext";
 
-import { useMutation, useQuery } from "@apollo/client";
 
 export const useHomePage = () => {
+  const { user } = useContext(SessionContext) 
   const router = useRouter()
-const { user } = useContext(SessionContext) 
 
 //Estado con el se capturo el id para eliminar la taskList
 const [taskListId, setTaskListid] = useState("")

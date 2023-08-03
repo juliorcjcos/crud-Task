@@ -6,8 +6,8 @@ import { useRouter } from "next/router";
 import { SessionContext } from "@/contexts/SessionContext";
 
 export const useUserFormLogin = ()=>{
+  const {logIn} = useContext(SessionContext)
     const router = useRouter();
-    const {logIn} = useContext(SessionContext)
     
     const initialValues = {
         email: "",

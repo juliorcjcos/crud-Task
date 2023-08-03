@@ -37,6 +37,7 @@ export const TaskCard = ({
 }) => {
   // estado para seleccionar la Task y pasar el elemento en la funcion onClick del boton eliminar
    const [selectedTask, setSelectedTask] = useState({});
+   
   return (
     <>
       {tasksCard?.tasksByOwner.length > 0

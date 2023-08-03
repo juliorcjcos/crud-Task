@@ -6,12 +6,13 @@ import { SessionContext } from "@/contexts/SessionContext";
 
 
 export const useCard = () => {
+  // estado con el que se capturo el id para eliminar la taskCard
+  const [taskCardId, setTaskCardId]= useState("")
+  
   const router = useRouter();
   //const [user, setUser] = useState(null);
   const {user} = useContext(SessionContext)
   
-  // estado con el que se capturo el id para eliminar la taskCard
-    const [taskCardId, setTaskCardId]= useState("")
     
   // si no existe sesion useLogin se agrega  a setUser y se rutea router.push / al inicio session
   // validar user para ingresar a las taskCard

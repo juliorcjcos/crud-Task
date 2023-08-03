@@ -1,8 +1,9 @@
 
 import { createUser } from "@/graphql/users";
 import { useMutation } from "@apollo/client";
+
  export const useRegisterPage =()=>{
-    const [userCreate]= useMutation(createUser,{
+    const [CreateUserRegister]= useMutation(createUser,{
     })
 
     const initialValues = {
@@ -31,7 +32,7 @@ import { useMutation } from "@apollo/client";
 
     const onSubmit = async (values,{resetForm}) => {
         resetForm()
-        await userCreate({
+        await CreateUserRegister({
         variables: {
             name: values.name,
             nit: values.nit,

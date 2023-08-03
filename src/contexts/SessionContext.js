@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
-import{createContext} from "react";
-
-import { useRouter } from "next/router";
 import { useLazyQuery } from "@apollo/client";
 import { userLogin } from "@/graphql/users";
- 
+import{createContext} from "react";
+import { useRouter } from "next/router";
+
 export const SessionContext = createContext();// crear contexto
+
 const SessionContextProvider = ({children})=>{
     const [user, setUser] = useState(null);
     const router = useRouter();

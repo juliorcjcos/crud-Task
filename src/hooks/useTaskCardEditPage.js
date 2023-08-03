@@ -1,6 +1,6 @@
+import { useMutation, useQuery } from "@apollo/client";
 import { SessionContext } from "@/contexts/SessionContext";
 import { tasksByOwner, updateTask } from "@/graphql/tasksCardGraphql";
-import { useMutation, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 
